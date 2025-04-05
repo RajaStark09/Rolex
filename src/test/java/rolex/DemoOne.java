@@ -52,19 +52,19 @@ public class DemoOne extends Reuse {
 			r.button(selects, 0);	
 		}
 
-		@When("User scroll and check the variety of food items")
-		public void user_scroll_and_check_the_variety_of_food_items() { 
-			WebElement down = driver.findElement(By.xpath("//p[text()='Desserts and Beverages (15)']"));
-			WebElement top = driver.findElement(By.xpath("//h1[text()='Famous Lassi & Juice Corner']"));
-		    JavascriptExecutor scroll = (JavascriptExecutor)driver;
-		    scroll.executeScript("arguments[0].scrollIntoView(false)",down);
-		    scroll.executeScript("arguments[0].scrollIntoView(true)",top);
-		}
-
-		@Then("Validate the User able to see all food items")
-		public void validate_the_user_able_to_see_all_food_items() {
-		   
-		}
+//		@When("User scroll and check the variety of food items")
+//		public void user_scroll_and_check_the_variety_of_food_items() { 
+//			WebElement down = driver.findElement(By.xpath("//p[text()='Desserts and Beverages (15)']"));
+//			WebElement top = driver.findElement(By.xpath("//h1[text()='Famous Lassi & Juice Corner']"));
+//		    JavascriptExecutor scroll = (JavascriptExecutor)driver;
+//		    scroll.executeScript("arguments[0].scrollIntoView(false)",down);
+//		    scroll.executeScript("arguments[0].scrollIntoView(true)",top);
+//		}
+//
+//		@Then("Validate the User able to see all food items")
+//		public void validate_the_user_able_to_see_all_food_items() {
+//		   
+//		}
 
 		
 	}

@@ -36,27 +36,27 @@ public class Reuse implements Reusable {
 
 	public static void browserLaunch() {
 		
-		DesiredCapabilities dc = new DesiredCapabilities();
-		ChromeOptions co = new ChromeOptions();
-		System.out.println(co.getBrowserName());
-		co.addArguments("start-maximized");
-		co.addArguments("--disable-popups");
-		co.addArguments("--disable-notification");
+//		DesiredCapabilities dc = new DesiredCapabilities();
+//		ChromeOptions co = new ChromeOptions();
+//		System.out.println(co.getBrowserName());
+//		co.addArguments("start-maximized");
+//		co.addArguments("--disable-popups");
+//		co.addArguments("--disable-notification");
 		
 				
-		try {
-			String lexUrl = null ;
-			File f = new File(".\\src\\test\\resources\\property.properties");
-			FileInputStream inp = new FileInputStream(f);
-			rolex = new Properties();
-			rolex.load(inp);
-			FileOutputStream ot = new FileOutputStream(f);
-			rolex.setProperty("name","Rajasekar");
-			rolex.save(ot, lexUrl);
-			}	
-			catch(Exception e) {
-				e.printStackTrace();
-			}
+//		try {
+//			String lexUrl = null ;
+//			File f = new File(".\\src\\test\\resources\\property.properties");
+//			FileInputStream inp = new FileInputStream(f);
+//			rolex = new Properties();
+//			rolex.load(inp);
+//			FileOutputStream ot = new FileOutputStream(f);
+//			rolex.setProperty("name","Rajasekar");
+//			rolex.save(ot, lexUrl);
+//			}	
+//			catch(Exception e) {
+//				e.printStackTrace();
+//			}
 //		DesiredCapabilities dc = new DesiredCapabilities();
 //		dc.setCapability("platformname", "windows 10");
 //		dc.setBrowserName("Edge");
@@ -69,7 +69,7 @@ public class Reuse implements Reusable {
 		WebDriverManager.edgedriver().setup();
 		driver = new EdgeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-//		driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		action = new Actions(driver);
 		js = (JavascriptExecutor)driver;
 		driver.get("https://www.zomato.com/");
